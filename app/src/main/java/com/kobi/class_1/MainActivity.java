@@ -14,5 +14,13 @@ public class MainActivity extends AppCompatActivity {
 
         double P = 3.14;
         double E = 2.71;
+        // TODO: 23/07/2020 add goldRatio number
+        double r = getRadius(200.0);
+
+    }
+
+    private double getRadius(double d) {
+        // TODO: 23/07/2020 create function
+        return 0;
     }
 }
