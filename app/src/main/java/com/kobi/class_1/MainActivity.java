@@ -13,5 +13,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         double P = 3.14;
+        double E = 2.71;
     }
 }
