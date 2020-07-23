@@ -3,12 +3,7 @@ package com.kobi.class_1;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.graphics.Color;
 import android.os.Bundle;
-import android.widget.Toast;
-
-
-import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,5 +12,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        double P = 3.14;
     }
 }
