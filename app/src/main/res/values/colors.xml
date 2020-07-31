@@ -10,4 +10,9 @@
     <color name="text_color">#000000</color>
 
 
+    <color name="validate">#4CAF50</color>
+    <color name="invalidate">#FF0000</color>
+
+
+
 </resources>

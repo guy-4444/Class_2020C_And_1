@@ -7,25 +7,27 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/main_LBL_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#FF0000"
+                android:layout_marginTop="20dp"
+                android:paddingTop="20dp"
+                android:background="#8BFF0000"
                 android:text="My title"
                 android:textColor="@color/title_color"
                 android:textSize="54sp"/>
 
             <TextView
+                android:id="@+id/main_LBL_subTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#00FFCC"
+                android:background="#3B00FFCC"
                 android:text="My sub title"
                 android:textColor="@color/sub_title_color"
                 android:textSize="18sp"/>
@@ -34,7 +36,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="#FF9900"
+                android:background="#3BFF9900"
                 android:text="My text"
                 android:textColor="@color/text_color"
                 android:textSize="18sp"/>
@@ -43,7 +45,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
-                android:background="#FF5900"
+                android:background="#3BFF5900"
                 android:text="My text"
                 android:textColor="@color/text_color"
                 android:textSize="18sp"/>
@@ -51,7 +53,7 @@
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/img_car"/>
+                android:src="@drawable/img_car" />
 
         </LinearLayout>
 
