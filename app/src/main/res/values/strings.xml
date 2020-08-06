@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Class_1</string>
+
+    <string name="begin">Begin</string>
+    <string name="close" translatable="false">Close</string>
+
 </resources>

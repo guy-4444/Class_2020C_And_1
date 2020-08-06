@@ -1,5 +1,6 @@
 package com.kobi.class_1;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
@@ -17,6 +18,8 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
+import java.util.Random;
+
 public class Activity_Panel extends AppCompatActivity {
 
     private ImageView panel_IMG_background;
@@ -27,10 +30,31 @@ public class Activity_Panel extends AppCompatActivity {
     private Button panel_BTN_b;
     private Button panel_BTN_c;
 
+    private int counter = 1;
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt("MY_INTEGER", counter);
+        Log.d("pttt", "onSaveInstanceState: " + counter);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+
+        if (savedInstanceState != null) {
+            int oldCounter = savedInstanceState.getInt("MY_INTEGER");
+            counter = oldCounter;
+            Log.d("pttt", "onRestoreInstanceState : " + oldCounter);
+        }
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_panel);
+        Log.d("pttt", "onCreate");
 
         findViews();
         panel_BTN_a.setOnClickListener(bottomClickListener);
@@ -46,6 +70,8 @@ public class Activity_Panel extends AppCompatActivity {
         Glide
                 .with(this)
                 .load("https://crosstalk.cell.com/hs-fs/hubfs/Images/Jennifer%20Levine/New%20Insights%20into%20pandas%2C/6990634-panda-hug.jpg?width=2560&height=1600&name=6990634-panda-hug.jpg")
+                .placeholder(R.drawable.img_loading)
+                .error(R.drawable.img_not_found)
                 .centerCrop()
                 .into(panel_IMG_background);
 
@@ -98,6 +124,8 @@ public class Activity_Panel extends AppCompatActivity {
     private View.OnClickListener bottomClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
+            counter++;
+            panel_LBL_result.setText("" + counter);
             bottomClicked(view);
         }
     };
@@ -120,4 +148,16 @@ public class Activity_Panel extends AppCompatActivity {
         panel_BTN_c = findViewById(R.id.panel_BTN_c);
     }
 
+
+    @Override
+    protected void onStart() {
+        Log.d("pttt", "onStart");
+        super.onStart();
+    }
+
+    @Override
+    protected void onStop() {
+        Log.d("pttt", "onStop");
+        super.onStop();
+    }
 }
